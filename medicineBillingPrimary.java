@@ -24,5 +24,25 @@ public class medicineBillingPrimary extends JFrame {
         setLocationRelativeTo(null);
         setVisible(true);
     }
+
+    private void loadMedicinePrices () {
+            try (BufferReader reader = new BufferReader(new FileReader ())) {//file location
+                String line;
+                while ((line =reader.readLine()) != null) {
+                    String [] parts =line.split(",");
+                    if (parts.length ==2) {
+                        medicinePrices.put(parts[0].trim(), Double.parseDouble(parts[1].trim()));
+                    }
+                }
+            }catch (IOException e) {
+                showError ("Error loading medicine prices");
+            }
+    }
+
+    private void setupUI(){
+
+
+
+    }
     
 }
