@@ -66,6 +66,26 @@ public class medicineBillingPrimary extends JFrame {
     }
 
     private void addToBill (ActionEvent e) {
+        String medicineName = inputMedicine.getText() ;
+        try {
+            int quantity = Integer.parseInt (intQuantity.getText()) ;
+            if (price != null) {
+                totalPrice +=price * quantity ;
+                billTextField.setText(totalPrice + "BDT") ;
+            }else {
+                showError("Medicine not found");
+            }
+        }catch(NumberFormatException ex) {
+            showError("Please enter a valid quantity");
+        }
+    }
 
+    private void showError(String message) {
+        JOptionPane.showMessageDialog(this. message, "Error",JOptionPane.ERROR_MESSAGE);
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(MedicineBillingPrimary::new);
     }
 }
+
