@@ -1,6 +1,6 @@
 # Medicine Billing System
 
-This is a Java Swing-based Medicine Billing System developed using NetBeans IDE's GUI Builder, featuring a professionally designed graphical user interface.
+This is a desktop application developed in Java using the Swing framework and NetBeans GUI Builder. It provides a simple and interactive interface for managing medicine sales and billing. The system reads medicine data from an external `.txt` file and allows users to select medicines, calculate totals, and generate bills efficiently.
 
 ## Features
 
