@@ -10,9 +10,9 @@ This is a Java Swing-based Medicine Billing System developed using NetBeans IDE'
 
 ## Sample Data
 
-The application uses a `medicines.txt` file containing over 1000 medicine records.
+The application uses a `medicine_prices.txt` file containing over 1000 medicine records.
 
-You can find this file in the `data/` folder. It is automatically loaded when the application starts.
+You can find this file in the `resources/` folder. It is automatically loaded when the application starts.
 
 ## Tools Used
 
